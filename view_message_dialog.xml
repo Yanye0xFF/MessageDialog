@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout"
+    android:background="@drawable/message_dialog_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:textColor="#ff1e90ff"
+        android:textSize="17sp"
+        android:text="测试标题"/>
+
+    <View
+        android:id="@+id/view_split"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@android:color/darker_gray">
+    </View>
+
+    <TextView
+        android:id="@+id/tv_dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/view_split"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:text="测试的消息内容"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dialog_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@android:color/black"
+        android:background="?attr/selectableItemBackground"
+        android:text="取消"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_cancel"
+        app:layout_constraintRight_toLeftOf="@+id/tv_cancel"
+        android:layout_marginEnd="20dp"
+        android:textColor="@android:color/black"
+        android:background="?attr/selectableItemBackground"
+        android:text="保存"
+        android:textSize="16sp"
+        android:padding="5dp"/>
+
+</android.support.constraint.ConstraintLayout>
